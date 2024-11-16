@@ -9,6 +9,10 @@ const port = 3000;
 
 // Middleware
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+  res.send("Welcome to the Chatbot API!");
+})
+
 
 // API để nhận yêu cầu và trả lời từ Chatbot
 app.post("/chat", async (req, res) => {
